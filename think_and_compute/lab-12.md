@@ -94,7 +94,7 @@ It is good practice to keep separate folders for separate projects. Each folder 
 To install a library and record it as a project dependency, use `uv add` followed by the package name. For example, to install the two libraries needed in this lab:
 
 ```
-uv add rdflib SPARQLWrapper
+uv add rdflib sparqlite
 ```
 
 This is the uv equivalent of `pip3 install`, with the advantage that the package is automatically recorded in `pyproject.toml`. If you ever need to set up the project on a different machine, running `uv sync` inside the folder will install all recorded packages automatically.
@@ -172,20 +172,20 @@ Create an empty RDF graph using `Graph()`. Then load `museums.csv` into a pandas
 - add the museum name using the `schema:name` property
 - add the city using the `schema:addressLocality` property
 
-Use a dictionary to store the mapping from each `museum_id` to its `URIRef`, so you can reference it when creating artwork triples. After processing all museums, print the number of triples in the graph (it should be 33: three triples per museum, times 11 museums).
+After processing all museums, iterate over the graph and print each triple to verify the result.
 
 ```{code-cell} python
 :tags: [hide-cell]
 from rdflib import Graph, URIRef, Literal, RDF
 from pandas import read_csv
 
-my_graph = Graph()
-base_url = "https://thinkcompute.github.io/res/"
+graph = Graph()
+BASE_IRI = "https://thinkcompute.github.io/res/"
 
-Museum = URIRef("https://schema.org/Museum")
-Church = URIRef("https://schema.org/Church")
-name = URIRef("https://schema.org/name")
-addressLocality = URIRef("https://schema.org/addressLocality")
+MUSEUM = URIRef("https://schema.org/Museum")
+CHURCH = URIRef("https://schema.org/Church")
+NAME = URIRef("https://schema.org/name")
+LOCALITY = URIRef("https://schema.org/addressLocality")
 
 df_museums = read_csv("notebook/museums.csv",
                       keep_default_na=False,
@@ -197,20 +197,19 @@ df_museums = read_csv("notebook/museums.csv",
                           "founded": "int"
                       })
 
-museum_resources = {}
 for idx, row in df_museums.iterrows():
-    subj = URIRef(base_url + "museum-" + str(row["museum_id"]))
-    museum_resources[row["museum_id"]] = subj
+    subject = URIRef(BASE_IRI + "museum-" + str(row["museum_id"]))
 
     if row["type"] == "museum":
-        my_graph.add((subj, RDF.type, Museum))
-    else:
-        my_graph.add((subj, RDF.type, Church))
+        graph.add((subject, RDF.type, MUSEUM))
+    elif row["type"] == "church":
+        graph.add((subject, RDF.type, CHURCH))
 
-    my_graph.add((subj, name, Literal(row["name"])))
-    my_graph.add((subj, addressLocality, Literal(row["city"])))
+    graph.add((subject, NAME, Literal(row["name"])))
+    graph.add((subject, LOCALITY, Literal(row["city"])))
 
-print(len(my_graph))
+for triple in graph:
+    print(triple)
 ```
 
 ### Exercise 1.2: Create resources for artworks
@@ -221,16 +220,16 @@ Load `artworks.csv` into a pandas DataFrame and, for each row, create the follow
 - add the title using the `schema:name` property
 - add the year using the `schema:dateCreated` property (cast the integer to a string, as shown in the [graph database chapter](20-graph-database.ipynb))
 - add the genre using the `schema:genre` property
-- link the artwork to its museum using the `schema:containedInPlace` property, with the museum `URIRef` retrieved from the dictionary built in the previous exercise
+- link the artwork to its museum using the `schema:containedInPlace` property. Use a dictionary to store the mapping from each `museum_id` to its `URIRef`, so you can look up the correct museum resource for each artwork
 
 After processing all artworks, print the number of triples in the graph (it should be 108: the 33 museum triples plus 5 triples per artwork times 15 artworks).
 
 ```{code-cell} python
 :tags: [hide-cell]
-Painting = URIRef("https://schema.org/Painting")
-dateCreated = URIRef("https://schema.org/dateCreated")
-genre = URIRef("https://schema.org/genre")
-containedInPlace = URIRef("https://schema.org/containedInPlace")
+PAINTING = URIRef("https://schema.org/Painting")
+DATE_CREATED = URIRef("https://schema.org/dateCreated")
+GENRE = URIRef("https://schema.org/genre")
+CONTAINED_IN = URIRef("https://schema.org/containedInPlace")
 
 df_artworks = read_csv("notebook/artworks.csv",
                         keep_default_na=False,
@@ -244,16 +243,20 @@ df_artworks = read_csv("notebook/artworks.csv",
                             "museum_id": "int"
                         })
 
+museum_resources = {}
+for idx, row in df_museums.iterrows():
+    museum_resources[row["museum_id"]] = URIRef(BASE_IRI + "museum-" + str(row["museum_id"]))
+
 for idx, row in df_artworks.iterrows():
-    subj = URIRef(base_url + "artwork-" + str(row["id"]))
+    subject = URIRef(BASE_IRI + "artwork-" + str(row["id"]))
 
-    my_graph.add((subj, RDF.type, Painting))
-    my_graph.add((subj, name, Literal(row["title"])))
-    my_graph.add((subj, dateCreated, Literal(str(row["year"]))))
-    my_graph.add((subj, genre, Literal(row["genre"])))
-    my_graph.add((subj, containedInPlace, museum_resources[row["museum_id"]]))
+    graph.add((subject, RDF.type, PAINTING))
+    graph.add((subject, NAME, Literal(row["title"])))
+    graph.add((subject, DATE_CREATED, Literal(str(row["year"]))))
+    graph.add((subject, GENRE, Literal(row["genre"])))
+    graph.add((subject, CONTAINED_IN, museum_resources[row["museum_id"]]))
 
-print(len(my_graph))
+print(len(graph))
 ```
 
 ---
@@ -269,7 +272,7 @@ The exercises in this part and in Parts 3 and 4 require Blazegraph to be running
 
 ### Exercise 2.1: Upload the graph to Blazegraph
 
-Using `SPARQLUpdateStore`, open a connection to the Blazegraph SPARQL endpoint and upload all the triples from `my_graph`. Iterate over the triples using `my_graph.triples((None, None, None))` and add each one with `store.add()`. Remember to close the connection when done.
+Using `SPARQLUpdateStore`, open a connection to the Blazegraph SPARQL endpoint and upload all the triples from `graph`. Iterate over the graph and add each triple with `store.add()`. Remember to close the connection when done.
 
 ````{admonition} Solution
 :class: tip, dropdown
@@ -280,7 +283,7 @@ store = SPARQLUpdateStore()
 endpoint = "http://127.0.0.1:9999/blazegraph/sparql"
 store.open((endpoint, endpoint))
 
-for triple in my_graph.triples((None, None, None)):
+for triple in graph:
     store.add(triple)
 
 store.close()
@@ -293,20 +296,17 @@ After running this code, you can verify the upload by opening `http://127.0.0.1:
 
 ## Part 3: Querying with SPARQL
 
-With the data stored in Blazegraph, you can use SPARQL to retrieve it. To send a SPARQL query from Python and get the result as a pandas DataFrame, you use the `SPARQLWrapper` library. The workflow is: create a `SPARQLWrapper` object pointing to the endpoint, set the query and the return format (JSON), execute the query, and convert the JSON result into a DataFrame.
+With the data stored in Blazegraph, you can use SPARQL to retrieve it. The most commonly used Python library for querying SPARQL endpoints is [SPARQLWrapper](https://sparqlwrapper.readthedocs.io/en/latest/). However, SPARQLWrapper has two known issues: it relies on [rdflib](https://rdflib.readthedocs.io/) internally for RDF representation, which adds parsing overhead, and it has a bug where HTTP connections are opened but never properly closed. In simple scripts these issues are rarely noticeable, but [SPARQLite](https://github.com/opencitations/sparqlite) is a lighter alternative that solves both problems.
 
-The following function wraps these steps. Define it at the top of your code, before the exercises, so you can reuse it throughout the lab:
+The workflow is: create a `SPARQLClient` pointing to the endpoint, send the query, and convert the JSON result into a DataFrame. The following function wraps these steps. Define it at the top of your code, before the exercises, so you can reuse it throughout the lab:
 
 ```python
-from SPARQLWrapper import SPARQLWrapper, JSON, POST
+from sparqlite import SPARQLClient
 from pandas import DataFrame
 
 def sparql_query(endpoint, query):
-    sparql = SPARQLWrapper(endpoint)
-    sparql.setMethod(POST)
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    result = sparql.queryAndConvert()
+    with SPARQLClient(endpoint) as client:
+        result = client.query(query)
 
     variables = result["head"]["vars"]
     rows = list()
@@ -322,7 +322,7 @@ def sparql_query(endpoint, query):
     return DataFrame(rows)
 ```
 
-The function sends the query to the endpoint using the HTTP POST method (required by Blazegraph), receives the results in JSON format, and converts each result row into a dictionary. The column names in the returned DataFrame match the variable names in the SPARQL query.
+The function sends the query to the endpoint, receives the results in JSON format, and converts each result row into a dictionary. The `SPARQLClient` is used within a context manager (`with`), which guarantees that the HTTP connection is properly closed after the query completes. The column names in the returned DataFrame match the variable names in the SPARQL query.
 
 The general structure of a SPARQL query is:
 
@@ -551,7 +551,7 @@ In this lab, you practised:
 
 - **Creating an RDF graph**: using `Graph()`, `URIRef`, `Literal`, and `RDF.type` from rdflib to convert tabular data into RDF triples
 - **Uploading to a triplestore**: using `SPARQLUpdateStore` to send triples to Blazegraph
-- **Querying with SPARQL**: using `SELECT`, triple patterns, `FILTER`, and `ORDER BY` to retrieve data from Blazegraph via `SPARQLWrapper`
+- **Querying with SPARQL**: using `SELECT`, triple patterns, `FILTER`, and `ORDER BY` to retrieve data from Blazegraph via SPARQLite
 - **Comparing approaches**: the same dataset queried with SQL in {ref}`ch-lab-11` and with SPARQL here, showing how different database technologies solve similar problems
 - **Combining tools**: using SPARQL to extract data from the triplestore and pandas to process the results further
 
@@ -562,5 +562,5 @@ In this lab, you practised:
 - [rdflib documentation](https://rdflib.readthedocs.io/en/stable/)
 - [SPARQL 1.1 query language specification](https://www.w3.org/TR/sparql11-query/)
 - [Blazegraph quick start](https://github.com/blazegraph/database/wiki/Quick_Start)
-- [SPARQLWrapper documentation](https://sparqlwrapper.readthedocs.io/en/latest/)
+- [SPARQLite documentation](https://opencitations.github.io/sparqlite/)
 - [schema.org vocabulary](https://schema.org/)
