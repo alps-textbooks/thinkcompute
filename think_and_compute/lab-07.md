@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: 2025-2026 Arcangelo Massari <arcangelo.massari@unibo.it>
+#
+# SPDX-License-Identifier: CC-BY-4.0
+
 jupytext:
   text_representation:
     extension: .md

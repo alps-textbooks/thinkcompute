@@ -1,10 +1,7 @@
-/*!
- * reveal.js
- * http://lab.hakim.se/reveal-js
- * MIT licensed
- *
- * Copyright (C) 2016 Hakim El Hattab, http://hakim.se
- */
+// Copyright (C) 2016 Hakim El Hattab, http://hakim.se
+// SPDX-FileCopyrightText: 2016 Hakim El Hattab, http://hakim.se
+//
+// SPDX-License-Identifier: MIT
 (function( root, factory ) {
 	if( typeof define === 'function' && define.amd ) {
 		// AMD. Register as an anonymous module.

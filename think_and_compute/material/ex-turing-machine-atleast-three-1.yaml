@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+#
+# SPDX-License-Identifier: CC-BY-4.0
+
 input: '010001'
 blank: '0'
 start state: start

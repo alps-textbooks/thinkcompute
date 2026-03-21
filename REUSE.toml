@@ -1,0 +1,273 @@
+version = 1
+
+[[annotations]]
+path = "REUSE.toml"
+SPDX-FileCopyrightText = "2026 Arcangelo Massari <arcangelo.massari@unibo.it>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = [
+    ".gitignore",
+    "CITATION.cff",
+]
+SPDX-FileCopyrightText = [
+    "2025 Arcangelo Massari <arcangelo.massari@unibo.it>",
+    "2025 Silvio Peroni <essepuntato@gmail.com>",
+]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = [
+    ".python-version",
+    "think_and_compute/img/new_file.png",
+    "think_and_compute/img/paths.png",
+    "think_and_compute/img/venn_diagram_operations.png",
+    "think_and_compute/img/vsc_python.png",
+]
+SPDX-FileCopyrightText = "2025 Arcangelo Massari <arcangelo.massari@unibo.it>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = [
+    "LICENSE",
+    "think_and_compute/15-what-is-a-datum.ipynb",
+    "think_and_compute/21-querying-databases.ipynb",
+    "think_and_compute/images/**",
+    "think_and_compute/logo.png",
+    "think_and_compute/material/.gitignore",
+    "think_and_compute/material/ex-flowchart-*.graphml",
+    "think_and_compute/notebook/01-example.csv",
+    "think_and_compute/notebook/01-example.tsv",
+    "think_and_compute/notebook/01-publications-modified-dict.csv",
+    "think_and_compute/notebook/01-publications-modified-dict.tsv",
+    "think_and_compute/notebook/01-publications-modified.csv",
+    "think_and_compute/notebook/01-publications-venues-modified.json",
+    "think_and_compute/notebook/01-publications-venues.json",
+    "think_and_compute/notebook/01-publications.csv",
+    "think_and_compute/notebook/01-venues.csv",
+    "think_and_compute/notebook/02-uml.graphml",
+    "think_and_compute/notebook/02-uml.png",
+    "think_and_compute/notebook/02-uml2.graphml",
+    "think_and_compute/notebook/02-uml2.png",
+    "think_and_compute/notebook/03-publications.csv",
+    "think_and_compute/notebook/03-publications_no_index.csv",
+    "think_and_compute/notebook/04-publications.csv",
+    "think_and_compute/notebook/05-tables.graphml",
+    "think_and_compute/notebook/05-tables.png",
+    "think_and_compute/notebook/06-blazegraph.png",
+    "think_and_compute/notebook/06-rdfgraph.graphml",
+    "think_and_compute/notebook/06-rdfgraph.png",
+    "think_and_compute/references.bib",
+    "think_and_compute/slides/.gitignore",
+    "think_and_compute/slides/css/ccby.png",
+    "think_and_compute/slides/img/**",
+    "think_and_compute/todo.txt",
+]
+SPDX-FileCopyrightText = "2025 Silvio Peroni <essepuntato@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Vendored: reveal.js distribution (Hakim El Hattab, MIT)
+[[annotations]]
+path = [
+    "think_and_compute/slides/css/print/**",
+    "think_and_compute/slides/css/theme/black.css",
+    "think_and_compute/slides/css/theme/blood.css",
+    "think_and_compute/slides/css/theme/moon.css",
+    "think_and_compute/slides/css/theme/README.md",
+    "think_and_compute/slides/css/theme/solarized.css",
+    "think_and_compute/slides/css/theme/white.css",
+    "think_and_compute/slides/css/theme/source/black.scss",
+    "think_and_compute/slides/css/theme/source/blood.scss",
+    "think_and_compute/slides/css/theme/source/moon.scss",
+    "think_and_compute/slides/css/theme/source/solarized.scss",
+    "think_and_compute/slides/css/theme/source/white.scss",
+    "think_and_compute/slides/css/theme/template/**",
+    "think_and_compute/slides/plugin/highlight/highlight.js",
+    "think_and_compute/slides/plugin/markdown/markdown.js",
+    "think_and_compute/slides/plugin/markdown/example.html",
+    "think_and_compute/slides/plugin/markdown/example.md",
+    "think_and_compute/slides/plugin/math/math.js",
+    "think_and_compute/slides/plugin/multiplex/client.js",
+    "think_and_compute/slides/plugin/multiplex/index.js",
+    "think_and_compute/slides/plugin/multiplex/master.js",
+    "think_and_compute/slides/plugin/multiplex/package.json",
+    "think_and_compute/slides/plugin/notes/notes.js",
+    "think_and_compute/slides/plugin/notes/notes.html",
+    "think_and_compute/slides/plugin/notes-server/client.js",
+    "think_and_compute/slides/plugin/notes-server/index.js",
+    "think_and_compute/slides/plugin/notes-server/notes.html",
+    "think_and_compute/slides/plugin/print-pdf/print-pdf.js",
+    "think_and_compute/slides/plugin/search/search.js",
+    "think_and_compute/slides/plugin/zoom-js/zoom.js",
+]
+SPDX-FileCopyrightText = "2011-2016 Hakim El Hattab <http://hakim.se>"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: marked.js (Christopher Jeffrey, MIT)
+[[annotations]]
+path = "think_and_compute/slides/plugin/markdown/marked.js"
+SPDX-FileCopyrightText = "2011-2014 Christopher Jeffrey"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: jQuery (JS Foundation, MIT)
+[[annotations]]
+path = "think_and_compute/slides/js/jquery.min.js"
+SPDX-FileCopyrightText = "2017 JS Foundation and other contributors"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: Popper.js (Federico Zivolo, MIT)
+[[annotations]]
+path = "think_and_compute/slides/js/popper.min.js"
+SPDX-FileCopyrightText = "2017 Federico Zivolo"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: head.js (Tero Piirainen, MIT)
+[[annotations]]
+path = "think_and_compute/slides/lib/js/head.min.js"
+SPDX-FileCopyrightText = "2014 Tero Piirainen"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: classList.js (Eli Grey)
+[[annotations]]
+path = "think_and_compute/slides/lib/js/classList.js"
+SPDX-FileCopyrightText = "2012 Eli Grey <http://eligrey.com>"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: HTML5 Shiv
+[[annotations]]
+path = "think_and_compute/slides/lib/js/html5shiv.js"
+SPDX-FileCopyrightText = "2014 Alexander Farkas"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: Zenburn highlight theme (Vladimir Epifanov)
+[[annotations]]
+path = "think_and_compute/slides/lib/css/zenburn.css"
+SPDX-FileCopyrightText = "2011 Vladimir Epifanov <voldmar@voldmar.ru>"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: Font Awesome 4.7 (Dave Gandy, MIT for CSS)
+[[annotations]]
+path = "think_and_compute/slides/css/font-awesome.min.css"
+SPDX-FileCopyrightText = "2016 Dave Gandy <http://fontawesome.io>"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: Font Awesome font files (SIL OFL)
+[[annotations]]
+path = [
+    "think_and_compute/slides/fonts/FontAwesome.otf",
+    "think_and_compute/slides/fonts/fontawesome-webfont.*",
+]
+SPDX-FileCopyrightText = "2016 Dave Gandy <http://fontawesome.io>"
+SPDX-License-Identifier = "OFL-1.1"
+
+# Vendored: Academicons 1.8 (James Walsh, OFL)
+[[annotations]]
+path = [
+    "think_and_compute/slides/css/academicons.min.css",
+    "think_and_compute/slides/fonts/academicons.*",
+]
+SPDX-FileCopyrightText = "2017 James Walsh"
+SPDX-License-Identifier = "OFL-1.1"
+
+# Vendored: Billboard.js (NAVER Corp, MIT)
+[[annotations]]
+path = "think_and_compute/slides/css/billboard.min.css"
+SPDX-FileCopyrightText = "2017 NAVER Corp."
+SPDX-License-Identifier = "MIT"
+
+# Vendored: MetricsGraphics (Mozilla, MIT)
+[[annotations]]
+path = "think_and_compute/slides/css/metricsgraphics.css"
+SPDX-FileCopyrightText = "2014 Mozilla"
+SPDX-License-Identifier = "MIT"
+
+# Vendored: League Gothic font (SIL OFL)
+[[annotations]]
+path = [
+    "think_and_compute/slides/lib/font/league-gothic/league-gothic.css",
+    "think_and_compute/slides/lib/font/league-gothic/league-gothic.eot",
+    "think_and_compute/slides/lib/font/league-gothic/league-gothic.ttf",
+    "think_and_compute/slides/lib/font/league-gothic/league-gothic.woff",
+    "think_and_compute/slides/lib/font/league-gothic/LICENSE",
+]
+SPDX-FileCopyrightText = "2010 The League of Moveable Type"
+SPDX-License-Identifier = "OFL-1.1"
+
+# Vendored: Source Sans Pro font (Adobe, SIL OFL)
+[[annotations]]
+path = [
+    "think_and_compute/slides/lib/font/source-sans-pro/source-sans-pro.css",
+    "think_and_compute/slides/lib/font/source-sans-pro/source-sans-pro-*.eot",
+    "think_and_compute/slides/lib/font/source-sans-pro/source-sans-pro-*.ttf",
+    "think_and_compute/slides/lib/font/source-sans-pro/source-sans-pro-*.woff",
+    "think_and_compute/slides/lib/font/source-sans-pro/LICENSE",
+]
+SPDX-FileCopyrightText = "2010, 2012 Adobe Systems Incorporated"
+SPDX-License-Identifier = "OFL-1.1"
+
+[[annotations]]
+path = [
+    "pyproject.toml",
+    "uv.lock",
+]
+SPDX-FileCopyrightText = "2025-2026 Arcangelo Massari <arcangelo.massari@unibo.it>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = [
+    "think_and_compute/.ipynb_checkpoints/**",
+    "think_and_compute/19-draft.ipynb",
+    "think_and_compute/material/.ipynb_checkpoints/**",
+    "think_and_compute/material/ex-hon_*.ipynb",
+    "think_and_compute/material/publications-db.db",
+    "think_and_compute/material/sandbox-hon_7.ipynb",
+    "think_and_compute/material/venues-ex-7_1.db",
+    "think_and_compute/notebook/.ipynb_checkpoints/**",
+]
+SPDX-FileCopyrightText = "2026 Ivan Heibi <ivanhb.ita@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "think_and_compute/16-data-models.ipynb"
+SPDX-FileCopyrightText = [
+    "2025 Silvio Peroni <essepuntato@gmail.com>",
+    "2026 Arcangelo Massari <arcangelo.massari@unibo.it>",
+    "2026 Ivan Heibi <ivanhb.ita@gmail.com>",
+]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = [
+    "think_and_compute/17-pandas.ipynb",
+    "think_and_compute/18-statistics.ipynb",
+    "think_and_compute/19-relational-database.ipynb",
+    "think_and_compute/20-graph-database.ipynb",
+]
+SPDX-FileCopyrightText = [
+    "2025 Silvio Peroni <essepuntato@gmail.com>",
+    "2026 Ivan Heibi <ivanhb.ita@gmail.com>",
+]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = [
+    "think_and_compute/material/01-publications-2020.csv",
+    "think_and_compute/material/01-publications-modified-with-pandas.csv",
+    "think_and_compute/material/ex-15-2-01-publications-venue-names.csv",
+    "think_and_compute/material/my-venues.db",
+    "think_and_compute/notebook/artworks.csv",
+    "think_and_compute/notebook/caravaggio.db",
+    "think_and_compute/notebook/collections.csv",
+    "think_and_compute/notebook/excellent_artworks.csv",
+    "think_and_compute/notebook/museums.csv",
+]
+SPDX-FileCopyrightText = "2026 Arcangelo Massari <arcangelo.massari@unibo.it>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "think_and_compute/notebook/05-publications.db"
+SPDX-FileCopyrightText = [
+    "2025 Silvio Peroni <essepuntato@gmail.com>",
+    "2025-2026 Arcangelo Massari <arcangelo.massari@unibo.it>",
+]
+SPDX-License-Identifier = "CC-BY-4.0"

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025-2026 Silvio Peroni <essepuntato@gmail.com>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 (ch-programming-languages)=
 # Programming Languages
 

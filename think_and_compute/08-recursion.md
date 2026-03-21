@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 (ch-recursion)=
 # Recursion
 This chapter introduces one of the main concepts related to Computational Thinking, i.e. the recursion. The historic hero introduced in these notes is Douglas Hofstadter. He is a cognitive scientist. He wrote one of the best-selling educational books on mathematics, logic and self-references entitled *Gödel, Escher, Bach: An Eternal Golden Braid*.

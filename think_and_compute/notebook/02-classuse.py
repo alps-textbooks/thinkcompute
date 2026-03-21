@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+#
+# SPDX-License-Identifier: ISC
+
 from myclasses import JournalArticle, Journal
 
 journal_1 = Journal(["1531-6912"], "Comparative and Functional Genomics")

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 (ch-computability)=
 # Computability
 

@@ -1,3 +1,12 @@
+<!--
+SPDX-FileCopyrightText: 2025 Arcangelo Massari <arcangelo.massari@unibo.it>
+SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+[![REUSE](https://github.com/thinkcompute/thinkcompute.github.io/actions/workflows/reuse.yml/badge.svg)](https://github.com/thinkcompute/thinkcompute.github.io/actions/workflows/reuse.yml)
+
 # Think and Compute: a Primer for Digital Humanists
 
 TODO

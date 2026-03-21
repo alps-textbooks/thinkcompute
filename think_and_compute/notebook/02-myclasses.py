@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+# SPDX-FileCopyrightText: 2026 Arcangelo Massari <arcangelo.massari@unibo.it>
+#
+# SPDX-License-Identifier: ISC
+
 class Publication:
     def __init__(self, doi, publicationYear, title, publicationVenue):
         self.doi = doi

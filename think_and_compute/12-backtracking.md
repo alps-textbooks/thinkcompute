@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 (ch-backtracking)=
 # Backtracking algorithms
 This chapter introduces an algorithmic technique used in constrained computational problems. Typical problems of this kind are those related to the resolution of abstract strategy board games, such as the peg solitaire. The historic hero introduced in these notes is AlphaGo, an artificial intelligence developed by Google DeepMind to play Go.

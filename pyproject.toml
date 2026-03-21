@@ -17,3 +17,8 @@ dependencies = [
     "sphinx-exercise>=1.2.0",
     "watchdog[watchmedo]>=6.0.0",
 ]
+
+[dependency-groups]
+dev = [
+    "reuse>=6.2.0",
+]

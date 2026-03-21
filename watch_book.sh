@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# SPDX-FileCopyrightText: 2025-2026 Arcangelo Massari <arcangelo.massari@unibo.it>
+#
+# SPDX-License-Identifier: ISC
+
 echo "Starting Jupyter Book watcher..."
 echo "Watching markdown files in: think_and_compute/"
 echo "Press Ctrl+C to stop"

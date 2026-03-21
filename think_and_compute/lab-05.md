@@ -1,4 +1,9 @@
 ---
+# SPDX-FileCopyrightText: 2025 Arcangelo Massari <arcangelo.massari@unibo.it>
+# SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
+#
+# SPDX-License-Identifier: CC-BY-4.0
+
 jupytext:
   text_representation:
     extension: .md
