@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-(ch-part-2-exercises)=
+(ch-part-4-exercises)=
 # Part 4: Exercises
 
 `````{exercise}
@@ -711,7 +711,7 @@ The source Python file of the code shown above is available {Download}`as part o
 `````{exercise}
 :label: part-4-ex-14
 
-Write in Python a recursive version of the function defined in the {numref}´part-4-ex-13´.
+Write in Python a recursive version of the function defined in the {numref}`part-4-ex-13`.
 
 Accompany the implementation of the function with the appropriate test cases. 
 

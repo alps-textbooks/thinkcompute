@@ -78,7 +78,7 @@ The second argument specifies the **mode** (what you want to do with the file):
 - `"w"` – Write: Create new file or overwrite existing
 - `"a"` – Append: Add to the end of existing file (or create new)
 
-```{admonition} The context manager: with statement
+````{admonition} The context manager: with statement
 :class: tip
 Always use the `with` statement when working with files. It automatically closes the file when done, even if an error occurs:
 
@@ -89,7 +89,7 @@ with open("filename.txt", "r") as file:
 ```
 
 This is safer and cleaner than manually calling `file.close()`.
-```
+````
 
 ### Writing to text files
 

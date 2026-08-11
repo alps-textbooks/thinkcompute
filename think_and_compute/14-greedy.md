@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-(ch-graphs)=
+(ch-greedy)=
 # Greedy algorithms
 
 This chapter introduces the last kind of algorithms presented in this book, i.e. the *greedy algorithms*. The historic hero introduced in these notes is Evelyn Berezin, one of the most influential businesswomen of the past century who have created the first word processor.
