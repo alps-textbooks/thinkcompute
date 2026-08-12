@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2025 Silvio Peroni <essepuntato@gmail.com>
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-(ch-part-4-exercises)=
+(ch-part-2-exercises)=
 # Part 4: Exercises
 
 `````{exercise}
