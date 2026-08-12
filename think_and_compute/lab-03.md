@@ -515,7 +515,7 @@ describe_book("Pride and Prejudice", "Jane Austen", 1813)
 describe_book("1984", "George Orwell", 1949)
 ```
 
-```{admonition} Parameter order matters!
+````{admonition} Parameter order matters!
 :class: note
 When calling a function, **the order of arguments matters**. Python matches arguments to parameters by position:
 - `describe_book("1984", "George Orwell", 1949)` ✅ Correct
@@ -526,6 +526,7 @@ You can avoid order issues by using **named arguments**:
 describe_book(year=1949, title="1984", author="George Orwell")
 ```
 With named arguments, order doesn't matter because you explicitly specify which value goes to which parameter.
+````
 
 ### Functions with return values
 
@@ -539,7 +540,7 @@ result = add_one(41)
 print(result)
 ```
 
-```{admonition} Functions always return something
+````{admonition} Functions always return something
 :class: note
 **Every function returns a value**, even if you don't specify `return`. If you don't use `return`, the function automatically returns `None`.
 
@@ -552,6 +553,7 @@ print(result)     # None
 ```
 
 When you want to use the result of a function elsewhere in your code, you must explicitly `return` a value.
+````
 
 ```{code-cell} python
 def calculate_years(start_year, end_year):
