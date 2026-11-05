@@ -1,0 +1,40 @@
+@prefix schema: <https://schema.org/> .
+
+<https://thinkcompute.github.io/res/publication-0> a schema:ScholarlyArticle ;
+    schema:datePublished "2003" ;
+    schema:identifier "10.1002/cfg.304" ;
+    schema:isPartOf <https://thinkcompute.github.io/res/venue-0> ;
+    schema:issueNumber "4" ;
+    schema:name "Development of Computational Tools for the Inference of Protein Interaction Specificity Rules and Functional Annotation Using Structural Information" ;
+    schema:volumeNumber "4" .
+
+<https://thinkcompute.github.io/res/publication-1> a schema:ScholarlyArticle ;
+    schema:datePublished "2002" ;
+    schema:identifier "10.1016/s1367-5931(02)00332-0" ;
+    schema:isPartOf <https://thinkcompute.github.io/res/venue-1> ;
+    schema:issueNumber "3" ;
+    schema:name "In vitro selection as a powerful tool for the applied evolution of proteins and peptides" ;
+    schema:volumeNumber "6" .
+
+<https://thinkcompute.github.io/res/publication-2> a schema:Chapter ;
+    schema:datePublished "1981" ;
+    schema:identifier "10.1002/9780470291092.ch20" ;
+    schema:isPartOf <https://thinkcompute.github.io/res/venue-2> ;
+    schema:name "Mechanisms of Toughening in Ceramic Matrix Composites" .
+
+<https://thinkcompute.github.io/res/venue-3> a schema:Periodical ;
+    schema:identifier "1027-3662" ;
+    schema:name "Journal of Theoretical Medicine" .
+
+<https://thinkcompute.github.io/res/venue-0> a schema:Periodical ;
+    schema:identifier "1531-6912" ;
+    schema:name "Comparative and Functional Genomics" .
+
+<https://thinkcompute.github.io/res/venue-1> a schema:Periodical ;
+    schema:identifier "1367-5931" ;
+    schema:name "Current Opinion in Chemical Biology" .
+
+<https://thinkcompute.github.io/res/venue-2> a schema:Book ;
+    schema:identifier "9780470291092" ;
+    schema:name "Proceedings of the 5th Annual Conference on Composites and Advanced Ceramic Materials: Ceramic Engineering and Science Proceedings" .
+

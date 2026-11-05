@@ -10,7 +10,7 @@ my_first_set.add(15)  # to the set without any particular order
 # currently my_first_set contains two elements:
 # set({ 34, 15 })
 
-my_first_set.set("Silvio")  # a set can contains element of any kind
+my_first_set.add("Silvio")  # a set can contains element of any kind
 # now my_first_set contains:
 # set({34, 15, "Silvio"})
 

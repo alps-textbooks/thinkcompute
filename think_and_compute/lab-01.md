@@ -17,6 +17,11 @@ kernelspec:
 (ch-lab-01)=
 # Getting started with Python
 
+```{admonition} Running this lab in Alps
+:class: note
+Every code cell in this lab runs in your browser, with nothing to install: run a cell on its own, or choose **Run All** in the toolbar. The steps that install uv, Python, VSCodium and libraries are for working on your own computer, and the rocket icon and **Live Code** steps in Part 3 are for the book's own website.
+```
+
 ```{admonition} Learning objectives
 :class: tip
 By the end of this lab, you will be able to:

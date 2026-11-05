@@ -13,6 +13,7 @@ parts:
     numbered: False
     chapters:
     - file: 00-preface
+    - file: about-this-book
   - caption: "Part 1: Basics of Computation"
     numbered: False
     chapters:
